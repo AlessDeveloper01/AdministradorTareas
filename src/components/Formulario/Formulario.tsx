@@ -7,7 +7,7 @@ type Tarea = {
     id?: string;
     nombreTarea: string;
     materia: string;
-    fechaFomat: string;
+    fecha: string;
     completado?: boolean;
 };
 
@@ -31,7 +31,7 @@ export const Formulario = ({ setTareas, tareas, tarea, fecha, setFecha, completa
         if (tarea.id) {
             setNombrwTarea(tarea.nombreTarea);
             setMateria(tarea.materia);
-            setFecha(tarea.fechaFomat);
+            setFecha(tarea.fecha);
         }
     }, [setFecha, tarea]);
 
@@ -43,13 +43,11 @@ export const Formulario = ({ setTareas, tareas, tarea, fecha, setFecha, completa
             return;
         }
 
-        const fechaFomat = formatearFecha(fecha);
-
         const nuevaTarea: Tarea = {
             nombreTarea,
             materia,
-            fechaFomat,
-            completado
+            fecha: formatearFecha(fecha),
+            completado,
         };
 
         if (tarea.id) {

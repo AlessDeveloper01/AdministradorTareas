@@ -5,7 +5,7 @@ type Tarea = {
     id?: string;
     nombreTarea: string;
     materia: string;
-    fechaFomat: string;
+    fecha: string;
     completado?: boolean;
 };
 
@@ -118,7 +118,7 @@ export const Tarea = ({ tareaUnica, handleEliminar, setTarea, handleCompletado }
                 <p className="text-black-bean-800 font-montserrat font-bold uppercase mb-5">
                     Entregrar el dia:{" "}
                     <span className="font-normal block">
-                        {tareaUnica.fechaFomat}
+                        {tareaUnica.fecha}
                     </span>
                 </p>
             ) : (

@@ -4,7 +4,7 @@ type Tarea = {
     id?: string;
     nombreTarea: string;
     materia: string;
-    fechaFomat: string;
+    fecha: string;
 };
 
 interface Props {
